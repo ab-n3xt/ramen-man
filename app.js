@@ -14,19 +14,20 @@ var data = {
 
 const header = {
     view: function() {
-        return m("header", 
+        return m("header", [
+            m("h1", {style: "color: white;"} ,"RAMEN MAN"),
             m("nav", [
                 m(m.route.Link, {href: "/"}, "Home"),
                 m(m.route.Link, {href: "/about"}, "About"),
                 m(m.route.Link, {href: "/menu"}, "Menu")
             ])
-        )
+        ])
     }
 }
 
 const footer = {
     view: function() {
-        return m("footer", "Footer content")
+        // return m("footer", "Footer content")
     }
 }
 
@@ -42,10 +43,7 @@ const template = {
 
 const homeContent = {
     view: function() {
-        return m("div", [
-            m("p", "Hello, home!"),
-            m("p", "Matilda (https://skfb.ly/6zGMG) by nicolekeane is licensed under CC Attribution-NonCommercial-ShareAlike (http://creativecommons.org/licenses/by-nc-sa/4.0/).")
-        ]);
+        // Elements...
     }
 }
 
@@ -70,17 +68,20 @@ const menuContent = {
 m.route(document.body, "/", {
     "/": {
         render: function() {
-            return m(template, m(homeContent))
+            document.title = "Ramen Man - Home";
+            return m(template, m(homeContent));
         }
     },
     "/about": {
         render: function() {
-            return m(template, m(aboutContent))
+            document.title = "Ramen Man - About";
+            return m(template, m(aboutContent));
         }
     },
     "/menu": {
         render: function() {
-            return m(template, m(menuContent))
+            document.title = "Ramen Man - Menu";
+            return m(template, m(menuContent));
         }
     }
 })

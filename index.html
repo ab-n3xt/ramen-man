@@ -4,6 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramen Man - Home</title>
+    <style>
+      body {
+        background-color: #094074;
+        display: flex;
+      }
+      header {
+        margin-left: 50px;
+        margin-top: 200px;
+      }
+      nav {
+        display: flex; 
+        flex-direction: column;
+        font-size: 24px;
+      }
+      nav > a {
+        text-decoration: none;
+        color: white;
+      }
+      nav > a:hover {
+        text-decoration: underline;
+      }
+      nav > a:not(:first-child) {
+        margin-top: 12px;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0%;
+        }
+        to {
+          opacity: 80%;
+        }
+      }
+      canvas {
+        animation: fadeIn 2s forwards;
+        z-index: -1;
+        background: #094074 no-repeat center center;
+        background-size: cover;
+        width: 550px;
+        height: 100%;
+      }
+    </style>
     <script src="https://unpkg.com/mithril/mithril.js"></script>
     <script type="importmap">
         {
