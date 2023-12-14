@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramen Man - Home</title>
     <script src="https://unpkg.com/mithril/mithril.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@v0.159.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@v0.159.0/examples/jsm/"
+          }
+        }
+    </script>
 </head>
 <body>
     <script src="app.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

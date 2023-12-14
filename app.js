@@ -42,7 +42,10 @@ const template = {
 
 const homeContent = {
     view: function() {
-        return m("p", "Hello, home!");
+        return m("div", [
+            m("p", "Hello, home!"),
+            m("p", "Matilda (https://skfb.ly/6zGMG) by nicolekeane is licensed under CC Attribution-NonCommercial-ShareAlike (http://creativecommons.org/licenses/by-nc-sa/4.0/).")
+        ]);
     }
 }
 
